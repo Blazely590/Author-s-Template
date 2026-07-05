@@ -1,3 +1,6 @@
+/* ========================
+   RESET & BASE
+======================== */
 * {
   margin: 0;
   padding: 0;
@@ -5,131 +8,24 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #222;
-  line-height: 1.6;
-  background: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  line-height: 1.7;
+  background: #ffffff;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(135deg, #111, #333);
-  color: white;
-  padding: 20px;
+/* ========================
+   CONTAINER
+======================== */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.hero h1 {
-  font-size: 48px;
-}
-
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: orange;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: darkorange;
-  transform: translateY(-2px);
-}
-
-/* FEATURED BOOK */
-.featured-book {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.featured-book img {
-  width: 200px;
-  border-radius: 10px;
-}
-
-/* BOOK GRID */
-.book-grid {
-  display: flex;
-  gap: 20px;
-}
-
-.book-card {
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  border: 1px solid #eee;
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-.book-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* IMAGES */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ABOUT */
-.about {
-  background: #f5f5f5;
-  text-align: left;
-}
-
-/* NEWSLETTER */
-.newsletter {
-  text-align: center;
-  background: #111;
-  color: white;
-}
-
-.newsletter input {
-  padding: 10px;
-  width: 60%;
-  margin-top: 10px;
-}
-
-.newsletter button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  background: orange;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: white;
-}
-/* NAVBAR */
+/* ========================
+   NAVBAR
+======================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -138,123 +34,253 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  color: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f1f1f1;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 36px;
 }
 
 .nav-links a {
-  color: white;
+  color: #374151;
   text-decoration: none;
-  font-size: 14px;
-  opacity: 0.8;
-  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  opacity: 1;
+  color: #111827;
 }
 
-/* HERO UPGRADE */
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  color: white;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  opacity: 1;
-}
-
-/* HERO UPGRADE */
+/* ========================
+   HERO
+======================== */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 0 20px;
-  background: radial-gradient(circle at center, #222, #000);
-  color: white;
+  padding: 100px 20px 60px;
+  background: #f8f9fa;
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 720px;
 }
 
 .hero h1 {
-  font-size: 52px;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #111827;
 }
 
 .hero p {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 25px;
+  font-size: 20px;
+  color: #4b5563;
+  margin-bottom: 32px;
 }
-/* AUTHOR IMAGE */
-.author-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #ddd;
-}
-/* =========================
-   TABLET + SMALL LAPTOPS
-========================= */
-@media (max-width: 900px) {
 
+/* ========================
+   SECTIONS
+======================== */
+.section {
+  padding: 100px 0;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #111827;
+}
+
+/* ========================
+   FEATURED BOOK
+======================== */
+.featured-book {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.book-image img {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+.book-info h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.book-description {
+  font-size: 17px;
+  color: #4b5563;
+  margin-bottom: 32px;
+}
+
+/* ========================
+   BOOK GRID
+======================== */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 
+              0 4px 6px -4px rgb(0 0 0 / 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f1f1f1;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.08), 
+              0 8px 10px -6px rgb(0 0 0 / 0.08);
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book-card-content {
+  padding: 24px;
+  text-align: center;
+}
+
+.book-card-content h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+/* ========================
+   BUTTONS
+======================== */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #111827;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  color: #111827;
+  border: 2px solid #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* ========================
+   ABOUT SECTION
+======================== */
+.about {
+  background: #f9fafb;
+}
+
+.about-container {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 10px solid white;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+.about-text p {
+  font-size: 17px;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+/* ========================
+   CONTACT SECTION
+======================== */
+.contact {
+  background: #111827;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  color: white;
+}
+
+.contact p {
+  font-size: 19px;
+  margin-bottom: 35px;
+  color: #d1d5db;
+}
+
+.contact-note {
+  margin-top: 24px;
+  font-size: 15px;
+  color: #9ca3af;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  background: #0f172a;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 900px) {
   .featured-book {
     flex-direction: column;
     text-align: center;
-  }
-
-  .book-grid {
-    flex-direction: column;
   }
 
   .about-container {
@@ -262,43 +288,25 @@ footer {
     text-align: center;
   }
 
-  .navbar {
-    padding: 15px 20px;
-  }
-
   .hero h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
 }
-@media (max-width: 600px) {
 
+@media (max-width: 600px) {
   .nav-links {
     display: none;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 34px;
   }
 
   .hero p {
-    font-size: 14px;
+    font-size: 17px;
   }
 
-  .newsletter input {
-    width: 90%;
-  }
-
-  .newsletter button {
-    margin-top: 10px;
-    width: 90%;
-  }
-
-  .featured-book img {
-    width: 150px;
-  }
-
-  .author-img {
-    width: 140px;
-    height: 140px;
+  .book-image img {
+    width: 240px;
   }
 }
