@@ -138,15 +138,19 @@ h2 {
 }
 
 /* ========================
-   BOOK GRID
+   BOOK GRID (Fixed Size)
 ======================== */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
+  justify-content: center;
 }
 
 .book-card {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
   background: white;
   border-radius: 16px;
   overflow: hidden;
@@ -165,8 +169,9 @@ h2 {
 .book-card img {
   width: 100%;
   height: auto;
-  object-fit: contain;
-  background: #f8f9fa;
+  aspect-ratio: 2 / 3;           /* Keeps book cover proportions */
+  object-fit: cover;
+  display: block;
 }
 
 .book-card-content {
@@ -179,7 +184,6 @@ h2 {
   margin-bottom: 16px;
   color: #111827;
 }
-
 /* ========================
    BUTTONS
 ======================== */
